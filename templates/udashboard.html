@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/stylesheets/card.css"/>
+    <script src="https://kit.fontawesome.com/8e954bb6ab.js" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(159, 112, 253,0.2);
+}
+
+.item-container {
+    background-color: #fff;
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-left-logo {
+    width: 60px;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-left-logo img {
+    width: 20%;
+}
+
+.top-right-cart {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.main-item {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.item-heading {
+    text-transform: capitalize;
+}
+
+.item-description {
+    margin: .5rem 0;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+.item-price {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.item-price sup {
+    color: green;
+}
+
+.rating i {
+    color: rgb(200, 142, 254);
+    margin-bottom: 1rem;
+}
+
+.item-cart-btn {
+    border: none;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    background-color: rgb(200, 142, 254);
+    color:hotpink;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.item-cart-btn:hover {
+    color: #fff;
+    background-color:deeppink;
+}
+.image1{
+    aspect-ratio: 3/2;
+}
+</style>
+</head>
+<body>
+    {% for i in count %}
+         <div class="item-container">
+            <div class="item-top">
+                <div class="top-left-logo">
+                    <img src="./logo.png" alt="">
+                </div>
+                <div class="top-right-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div> 
+            <div class="main-item">
+                <img src="{{url_for('static',filename=i[7])}}" width="100%" height="100%" alt="" class="image1">
+            </div>
+            <h2 class="item-heading" name="name">
+                {{i[1]}}
+            </h2>
+            <p class="item-description" name="category">
+                {{i[4]}}
+            </p>
+            <p class="item-description" name="stock">
+                {{i[3]}}
+            </p>
+            <ul class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </ul>
+            <p class="item-price" name="price"><sup>₹</sup>{{i[5]}}</p>
+            <a href="{{url_for('cart',itemid=i[0],item_name=i[1],dis=i[2],category=i[4],price=i[5],qyt=i[3],img_id=i[7])}}">
+            <button class="item-cart-btn">Add Cart</button><br><br></a>
+            <a href="#"><button class="item-cart-btn">Buy Now</button></a>
+            </div>
+          
+            <!-- <button class="item-cart-btn">Buy Now</button> -->
+        </div>
+    {% endfor %}    
+</body>
+</html>
