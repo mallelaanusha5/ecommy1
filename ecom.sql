@@ -41,11 +41,7 @@ CREATE TABLE `additems` (
 -- Dumping data for table `additems`
 --
 
-LOCK TABLES `additems` WRITE;
-/*!40000 ALTER TABLE `additems` DISABLE KEYS */;
-INSERT INTO `additems` VALUES (_binary ',ý\Ìýï›Š¥þ\rC+','ktm bike','adsfdgfgtrthr',55,'electronics',20000,'anushamallela568@gmail.com','6Xz8Dt.jpg'),(_binary 'Ea\Zhüï›Š¥þ\rC+','anusha','adsfdgfgtrthr',55,'electronics',70000,'anushamallela568@gmail.com','0So9Aa.jpeg'),(_binary 'E\ÍZš¸ï›Š¥þ\rC+','anusha','asdfghjklkuytrewa',1,'home',25000,'anushamallela568@gmail.com','1Fh6Ci.jpg'),(_binary '\åmCv\Çï›Š¥þ\rC+','anusha','sdffghjuytredfg',5,'fashion',50000,'anushamallela568@gmail.com','8Jf7Yt.jpg'),(_binary 'ù\ìD.\Çï›Š¥þ\rC+','oppp A17','adsfdgfgtrthr',55,'electronics',15000,'anushamallela568@gmail.com','3Pa5Yz.png'),(_binary 'û\Ëzÿï›Š¥þ\rC+','Grocery','sfghjk',55,'grocery',25,'anushamallela568@gmail.com','2Nb9Aa.jpg');
-/*!40000 ALTER TABLE `additems` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `orders`
@@ -76,11 +72,7 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-LOCK TABLES `orders` WRITE;
-/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (_binary 'º&¥\èï›Š¥þ\rC+',_binary ',ý\Ìýï›Š¥þ\rC+','ktm bike',1,20000.0000,'mallelaanusha568@gmail.com','electronics','6Xz8Dt.jpg','adsfdgfgtrthr'),(_binary '\Ñh\ì8¬ï›Š¥þ\rC+',_binary '\åmCv\Çï›Š¥þ\rC+','anusha',1,50000.0000,'mallelaanusha568@gmail.com','fashion','8Jf7Yt.jpg','sdffghjuytredfg');
-/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `user`
@@ -104,11 +96,7 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('anusha',9963119418,'mallelaanusha568@gmail.com','vijayawada',_binary '$2b$12$W5.RhGMLlTXcYJGyql4qB.RTxXFLPS/NFBUNygnpTppi3YT4SP7Re');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `vendor`
@@ -132,11 +120,7 @@ CREATE TABLE `vendor` (
 -- Dumping data for table `vendor`
 --
 
-LOCK TABLES `vendor` WRITE;
-/*!40000 ALTER TABLE `vendor` DISABLE KEYS */;
-INSERT INTO `vendor` VALUES ('anushamallela568@gmail.com','anusha',9963119418,'vijayawada',_binary '$2b$12$zs5RmGiZ3gqiyFgbq8qvzujle3dLwAY4e9i2u65cFOZjs0bQ.RiDW'),('mallelaanusha568@gmail.com','anusha',7207994181,'vijayawada',_binary '$2b$12$AiKf7.UtihNmp7199PcRUel.IeTza8ELrXOucd6qeuaV3k6Cukqy.');
-/*!40000 ALTER TABLE `vendor` ENABLE KEYS */;
-UNLOCK TABLES;
+
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
