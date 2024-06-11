@@ -3,7 +3,7 @@ from smtplib import SMTP
 from email.message import EmailMessage
 def cmail(to,subject,body):
     server=smtplib.SMTP_SSL('smtp.gmail.com',465)
-    server.login('anushamallela568@gmail.com','yame fsec kzmg hcvu')
+    server.login('anushamallela568@gmail.com','ukoy eczc pgkn qtnk')
     msg=EmailMessage()
     msg['FROM']='anushamallela568@gmail.com'
     msg['SUBJECT']=subject
